@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/MinotaurLogistics/EbayInventoryApi.svg?branch=master)](https://travis-ci.com/MinotaurLogistics/EbayInventoryApi)
 # Ebay Inventory Api
 The Inventory API is used to create and manage inventory, and then to publish and manage this inventory on an eBay marketplace. There are also methods in this API that will convert eligible, active eBay listings into the Inventory API model.
 
