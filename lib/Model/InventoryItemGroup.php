@@ -60,7 +60,7 @@ class InventoryItemGroup implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'aspects' => 'array<string,string>',
+        'aspects' => 'array<string,string[]>',
         'description' => 'string',
         'image_urls' => 'string[]',
         'inventory_item_group_key' => 'string',
@@ -251,7 +251,7 @@ class InventoryItemGroup implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets aspects
      *
-     * @return array<string,string>|null
+     * @return array<string,string[]>|null
      */
     public function getAspects()
     {
@@ -261,7 +261,7 @@ class InventoryItemGroup implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets aspects
      *
-     * @param array<string,string>|null $aspects This container consists of an array of aspects that are shared by all product variations within the inventory item group. Common aspects for the inventory item group are not immediately required upon creating an inventory item group, but these aspects will be required before the first offer of the group is published. Common aspects for a men's t-shirt might be pattern and sleeve length. See the example below to get an idea of the JSON syntax that is used to specify common aspects: &quot;aspects&quot;: {  &quot;pattern&quot;: [&quot;solid&quot;],  &quot;sleeves&quot;: [&quot;short&quot;]  }This container is always returned if one or more offers associated with the inventory item group have been published, and is only returned if set for an inventory item group if that group has yet to have any offers published.
+     * @param array<string,string[]>|null $aspects This container consists of an array of aspects that are shared by all product variations within the inventory item group. Common aspects for the inventory item group are not immediately required upon creating an inventory item group, but these aspects will be required before the first offer of the group is published. Common aspects for a men's t-shirt might be pattern and sleeve length. See the example below to get an idea of the JSON syntax that is used to specify common aspects: &quot;aspects&quot;: {  &quot;pattern&quot;: [&quot;solid&quot;],  &quot;sleeves&quot;: [&quot;short&quot;]  }This container is always returned if one or more offers associated with the inventory item group have been published, and is only returned if set for an inventory item group if that group has yet to have any offers published.
      *
      * @return self
      */

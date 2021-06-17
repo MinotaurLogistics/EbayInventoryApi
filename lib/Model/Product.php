@@ -60,7 +60,7 @@ class Product implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'aspects' => 'array<string,string>',
+        'aspects' => 'array<string,string[]>',
         'brand' => 'string',
         'description' => 'string',
         'ean' => 'string[]',
@@ -269,7 +269,7 @@ class Product implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets aspects
      *
-     * @return array<string,string>|null
+     * @return array<string,string[]>|null
      */
     public function getAspects()
     {
@@ -279,7 +279,7 @@ class Product implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets aspects
      *
-     * @param array<string,string>|null $aspects This is an array of item specific pairs that provide more information about the product and might make it easier for buyers to find. To view required/recommended product aspects/item specifics names (and corresponding values) for a specific eBay category, sellers can use the GetCategorySpecifics call of the Trading API. Alternatively, sellers can view similar items on eBay.com in the same category to get an idea of what other sellers are using for product aspects/item specifics. Sellers also have the option of specifying an eBay Product ID (ePID) or optionally, a Global Trade Item Number (GTIN) through the corresponding fields in the product container in an attempt to find a product match in the eBay Catalog. If a match is found based on the ePID or GTIN value, the product aspects that are defined for the eBay Catalog product will automatically get picked up by the newly created/updated inventory item. Below is an example of the proper JSON syntax to use when manually inputting item specifics: &quot;aspects&quot;: {  &quot;Brand&quot;: [&quot;GoPro&quot;],  &quot;Storage Type&quot;: [&quot;Removable&quot;]  } Note that inventory items that will become part of an inventory item group and multiple-variation listing should have the same attributes that are defined for the inventory item group. This container will be returned if one or more item specific pairs are defined for the inventory item. Max Length for Aspect Name: 40 Max Length for Aspect Value: 50
+     * @param array<string,string[]>|null $aspects This is an array of item specific pairs that provide more information about the product and might make it easier for buyers to find. To view required/recommended product aspects/item specifics names (and corresponding values) for a specific eBay category, sellers can use the GetCategorySpecifics call of the Trading API. Alternatively, sellers can view similar items on eBay.com in the same category to get an idea of what other sellers are using for product aspects/item specifics. Sellers also have the option of specifying an eBay Product ID (ePID) or optionally, a Global Trade Item Number (GTIN) through the corresponding fields in the product container in an attempt to find a product match in the eBay Catalog. If a match is found based on the ePID or GTIN value, the product aspects that are defined for the eBay Catalog product will automatically get picked up by the newly created/updated inventory item. Below is an example of the proper JSON syntax to use when manually inputting item specifics: &quot;aspects&quot;: {  &quot;Brand&quot;: [&quot;GoPro&quot;],  &quot;Storage Type&quot;: [&quot;Removable&quot;]  } Note that inventory items that will become part of an inventory item group and multiple-variation listing should have the same attributes that are defined for the inventory item group. This container will be returned if one or more item specific pairs are defined for the inventory item. Max Length for Aspect Name: 40 Max Length for Aspect Value: 50
      *
      * @return self
      */

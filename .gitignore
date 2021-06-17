@@ -12,5 +12,3 @@ composer.phar
 
 # PHPUnit cache
 .phpunit.result.cache
-
-.openapi-generator/*
